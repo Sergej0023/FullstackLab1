@@ -2,10 +2,10 @@
 GET http://localhost:5000/api/dishes/
 
 ### GET request dish by sepcific name
-GET http://localhost:5000/api/dish/Chicken%20Tikka%20Masala
+GET http://localhost:5000/api/dishes/Chicken%20Tikka%20Masala
 
 ### POST request one dish
-POST http://localhost:5000/api/dish
+POST http://localhost:5000/api/dishes
 Content-Type: application/json
 Cookie: key=first-value
 
@@ -19,4 +19,4 @@ Cookie: key=first-value
 }
 
 ### DELETE request id dish
-DELETE http://localhost:5000/api/dish/6485fa4b0d1b9c824b4f6e22
+DELETE http://localhost:5000/api/dishes/6485fa4b0d1b9c824b4f6e22
