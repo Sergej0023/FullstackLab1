@@ -1,0 +1,150 @@
+/* General Page Styles */
+body {
+    background-color: #181818; /* Dark background similar to Steam */
+    color: #EDEDED; /* Light text color */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background-color: #202020; /* Darker background for the table */
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Table Header */
+th {
+    background-color: #2A2A2A; /* Dark header background */
+    padding: 12px;
+    text-align: left;
+    font-size: 16px;
+}
+
+/* Table Cells */
+td {
+    background-color: #181818;
+    padding: 12px;
+    font-size: 14px;
+    border-bottom: 1px solid #333333;
+}
+
+/* Table Row on Hover */
+tr:hover {
+    background-color: #2A2A2A; /* Slightly lighter row on hover */
+}
+
+/* Buttons */
+button {
+    background-color: #4C8BF5; /* Steam blue button color */
+    color: white;
+    font-size: 14px;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #3E72D3; /* Slightly darker blue on hover */
+}
+
+button:disabled {
+    background-color: #5D5D5D; /* Disabled button style */
+    cursor: not-allowed;
+}
+
+/* Edit and Delete Buttons */
+.edit-btn, .delete-btn {
+    margin-right: 10px;
+}
+
+/* Delete Confirmation Section */
+.delete-confirmation {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 8px;
+}
+
+.confirm-delete, .cancel-delete {
+    background-color: #FF5555; /* Red for delete */
+    color: white;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 12px;
+    transition: background-color 0.3s ease;
+}
+
+.confirm-delete:hover, .cancel-delete:hover {
+    background-color: #D94C4C; /* Darker red on hover */
+}
+
+/* Form Styling */
+#dishForm {
+    background-color: #202020;
+    padding: 20px;
+    border-radius: 8px;
+    display: none;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+#dishForm input, #dishForm textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 12px;
+    background-color: #333333;
+    color: #EDEDED;
+    border: 1px solid #444444;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+#dishForm button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4C8BF5; /* Steam blue */
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#dishForm button:hover {
+    background-color: #3E72D3;
+}
+
+/* Header Styling */
+h1 {
+    color: #EDEDED;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    table {
+        font-size: 12px;
+    }
+
+    button {
+        font-size: 12px;
+        padding: 8px 14px;
+    }
+
+    #dishForm {
+        max-width: 90%;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+}

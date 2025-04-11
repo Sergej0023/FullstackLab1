@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dishes Management</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="container">
+    <h1>Dishes Management</h1>
+    <table>
+        <thead>
+        <tr>
+            <th>Name</th>
+            <th>Ingredients</th>
+            <th>Preparation Steps</th>
+            <th>Origin</th>
+            <th>Spice Level</th>
+            <th>Actions</th>
+        </tr>
+        </thead>
+        <tbody id="dishList">
+        <!-- Dish rows will be inserted here -->
+        </tbody>
+    </table>
+
+    <!-- Edit Dish Form -->
+    <div id="dishForm" style="display: none;">
+        <h3>Edit Dish</h3>
+        <input type="text" id="dishName" placeholder="Dish Name" required>
+        <input type="text" id="dishIngredients" placeholder="Ingredients (comma-separated)" required>
+        <input type="text" id="dishPreparationSteps" placeholder="Preparation Steps (comma-separated)" required>
+        <input type="text" id="dishOrigin" placeholder="Origin" required>
+        <input type="text" id="spiceLevel" placeholder="Spice Level" required>
+        <button id="editDishBtn">Update Dish</button>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
