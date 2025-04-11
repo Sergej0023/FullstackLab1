@@ -1,0 +1,22 @@
+### GET request all dishes
+GET http://localhost:5000/api/dishes/
+
+### GET request dish by sepcific name
+GET http://localhost:5000/api/dish/Chicken%20Tikka%20Masala
+
+### POST request one dish
+POST http://localhost:5000/api/dish
+Content-Type: application/json
+Cookie: key=first-value
+
+{
+  "name" : "value",
+  "ingredients" :  ["1", "2"],
+  "preparationSteps" :  ["1", "2"],
+  "cookingTime" : 15,
+  "origin" : "value",
+  "difficulty" : "value"
+}
+
+### DELETE request id dish
+DELETE http://localhost:5000/api/dish/6485fa4b0d1b9c824b4f6e22
