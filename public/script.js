@@ -9,6 +9,16 @@ document.addEventListener("DOMContentLoaded", function() {
     const dishSpiceLevelInput = document.getElementById('spiceLevel');
     const editDishBtn = document.getElementById('editDishBtn'); // Button to trigger updating a dish
 
+
+
+    const addDishBtn = document.getElementById('addDishBtn');
+    const newDishName = document.getElementById('newDishName');
+    const newDishIngredients = document.getElementById('newDishIngredients');
+    const newDishPreparationSteps = document.getElementById('newDishPreparationSteps');
+    const newDishOrigin = document.getElementById('newDishOrigin');
+    const newSpiceLevel = document.getElementById('newSpiceLevel');
+
+
     let currentDishId = null; // Holds the ID of the dish being edited
 
     // Fetch all dishes from the API
@@ -165,6 +175,40 @@ document.addEventListener("DOMContentLoaded", function() {
             })
             .catch(error => console.error('Error deleting dish:', error));
     }
+
+
+    addDishBtn.addEventListener('click', function () {
+        const name = newDishName.value.trim();
+        const ingredients = newDishIngredients.value.split(',').map(item => item.trim());
+        const preparationSteps = newDishPreparationSteps.value.split(',').map(item => item.trim());
+        const origin = newDishOrigin.value.trim();
+        const spiceLevel = newSpiceLevel.value.trim();
+
+        if (name && ingredients.length && preparationSteps.length && origin && spiceLevel) {
+            fetch('http://localhost:5000/api/dishes', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ name, ingredients, preparationSteps, origin, spiceLevel })
+            })
+                .then(response => response.json())
+                .then(() => {
+                    // Clear form
+                    newDishName.value = '';
+                    newDishIngredients.value = '';
+                    newDishPreparationSteps.value = '';
+                    newDishOrigin.value = '';
+                    newSpiceLevel.value = '';
+
+                    // Refresh dish list
+                    fetchDishes();
+                })
+                .catch(error => console.error('Error adding dish:', error));
+        } else {
+            alert("Please fill out all fields to add a new dish.");
+        }
+    });
 
     // Initial fetch of dishes when the page loads
     fetchDishes();

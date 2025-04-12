@@ -20,7 +20,7 @@ class DatabaseService {
                     ingredients: [String],
                     preparationSteps: [String],
                     origin: String,
-                    spiceLevel: String,  // Add spiceLevel to your dish schema
+                    spiceLevel: String,
                 },
                 { collection: 'dish' }  // Specify the collection name
             );

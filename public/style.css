@@ -148,3 +148,46 @@ h1 {
         font-size: 24px;
     }
 }
+
+/* New Dish Form Styling */
+#newDishForm {
+    background-color: #202020;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 400px;
+    margin: 20px auto;
+}
+
+#newDishForm input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 12px;
+    background-color: #333333;
+    color: #EDEDED;
+    border: 1px solid #444444;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+#newDishForm button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4C8BF5;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#newDishForm button:hover {
+    background-color: #3E72D3;
+}
+
+
+#addDishForm{
+    display: flex;
+    justify-content: center;
+    margin-top: 5rem;
+}
