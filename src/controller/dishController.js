@@ -75,6 +75,21 @@ class DishesController {
         console.log(putDish);  // Log the updated dish (for debugging)
         res.json({ putDish });  // Return the updated dish as JSON response
     }
+
+    async getDishById(req, res) {
+        try {
+            const { id } = req.params;  // Get the dish name from request params
+            const dish = await dishModel.getDishById(id);  // Get dish by name from the model
+            if (!dish) {
+                return res.status(404).json({ message: 'Dish not found' });  // Return 404 if not found
+            }
+            res.json(dish);  // Return the dish as JSON response
+        } catch (err) {
+            console.log(err);  // Log any errors
+            res.status(500).json({ message: 'Server Error' });  // Handle server errors
+        }
+    }
+
 }
 
 export default new DishesController();  // Export the controller as a singleton

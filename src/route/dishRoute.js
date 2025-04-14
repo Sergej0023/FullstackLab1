@@ -13,6 +13,10 @@ router.get('/dishes/:name', (req, res) => {
     controller.getDishByName(req, res);  // Call the getDishByName method in the controller
 });
 
+router.get('/dish/:id', (req, res) => {
+    controller.getDishById(req, res);  // Call the getDishByName method in the controller
+});
+
 // Route to create a new dish
 router.post('/dishes', (req, res) => {
     controller.postDish(req, res);  // Call the postDish method in the controller
@@ -27,3 +31,4 @@ router.delete('/dishes/:id', (req, res) => {
 router.put('/dishes/:id', (req, res) => {
     controller.putDish(req, res);  // Call the putDish method in the controller
 });
+

@@ -2,7 +2,7 @@
 GET http://localhost:5000/api/dishes/
 
 ### GET request dish by sepcific name
-GET http://localhost:5000/api/dishes/Chicken%20Tikka%20Masala
+GET http://localhost:5000/api/dishes/Pasulj
 
 ### POST request one dish
 POST http://localhost:5000/api/dishes
@@ -10,7 +10,7 @@ Content-Type: application/json
 Cookie: key=first-value
 
 {
-  "name" : "value",
+  "name" : "Test",
   "ingredients" :  ["1", "2"],
   "preparationSteps" :  ["1", "2"],
   "cookingTime" : 15,
@@ -19,4 +19,8 @@ Cookie: key=first-value
 }
 
 ### DELETE request id dish
-DELETE http://localhost:5000/api/dishes/6485fa4b0d1b9c824b4f6e22
+DELETE http://localhost:5000/api/dishes/ID
+
+
+### Get request id dish
+GET http://localhost:5000/api/dish/67f91575d64990fa46b71243

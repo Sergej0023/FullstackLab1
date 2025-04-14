@@ -45,7 +45,7 @@ class DishModel {
     // Fetch a specific dish by ID
     async getDishById(id) {
         try {
-            return await databaseService.dish.findOne({ '_id': id });  // Find the dish by ID
+            return await databaseService.dish.findById(id);  // Find the dish by ID
         } catch (err) {
             console.log("Error fetching dish by ID:", err);  // Log specific error message
             throw new Error("Could not fetch dish by ID");  // Propagate the error for higher-level handling
